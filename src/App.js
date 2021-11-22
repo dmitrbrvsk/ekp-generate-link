@@ -3,6 +3,7 @@ import { Button } from '@alfalab/core-components-button';
 import { Typography } from '@alfalab/core-components-typography';
 import { Input } from '@alfalab/core-components-input';
 import { Link } from '@alfalab/core-components-link';
+import { nanoid } from 'nanoid'
 
 import './App.css';
 
@@ -17,8 +18,8 @@ class App extends Component {
       ClientOGRN: '5105415093988',
       ClientTIN: '2875033373',
       CreditTerm: '36',
-      IdDealSFA: 'OP-110234',
-      IdOffer: '60001866173',
+      IdDealSFA: nanoid(10),
+      IdOffer: nanoid(10),
       LoanAmount: '500000',
       LoanProduct: 'LT01',
       ManagerDomain: 'MOSCOW',
@@ -33,9 +34,19 @@ class App extends Component {
     link: 'https://testjmb.alfabank.ru/credits/?'
   }
 
-  handleClickButton = () => {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.fields !== this.state.fields) {
+      this.generateLink();
+    }
+  }
+
+  generateLink = () => {
     const link = `https://testjmb.alfabank.ru/credits/?${Object.entries(this.state.fields).map((field) => `${field[0]}=${field[1]}`).join('&')}`
     this.setState({ link })
+  }
+
+  handleClickButton = () => {
+    this.generateLink();
   }
 
   handleChangeInput = (event, { value }) => {
@@ -47,6 +58,28 @@ class App extends Component {
     })
   }
 
+  handleClickButtonRandomOffer = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      fields: {
+        ...prevState.fields,
+        IdOffer: nanoid(10)
+
+      }
+    }))
+  }
+
+  handleClickButtonRandomIdDealSFA = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      fields: {
+        ...prevState.fields,
+        IdDealSFA: nanoid(10)
+
+      }
+    }))
+  }
+
   render() {
     return (
       <div className="app">
@@ -54,6 +87,36 @@ class App extends Component {
           Генерация ссылки для открытия анкеты ЕКП
         </Typography.Title>
         <div className="container-fields">
+          <Input
+            className="field"
+            onChange={this.handleChangeInput}
+            label='IdDealSFA'
+            name='IdDealSFA'
+            value={this.state.fields['IdDealSFA']}
+            rightAddons={(
+              <Button
+                size="xs"
+                view="transparent"
+                onClick={this.handleClickButtonRandomIdDealSFA}>
+                random
+              </Button>
+            )}
+          />
+          <Input
+            className="field"
+            onChange={this.handleChangeInput}
+            label='IdOffer'
+            name='IdOffer'
+            value={this.state.fields['IdOffer']}
+            rightAddons={(
+              <Button
+                size="xs"
+                view="transparent"
+                onClick={this.handleClickButtonRandomOffer}>
+                random
+              </Button>
+            )}
+          />
           <Input
             className="field"
             onChange={this.handleChangeInput}
@@ -102,20 +165,6 @@ class App extends Component {
             label='CreditTerm'
             name='CreditTerm'
             value={this.state.fields['CreditTerm']}
-          />
-          <Input
-            className="field"
-            onChange={this.handleChangeInput}
-            label='IdDealSFA'
-            name='IdDealSFA'
-            value={this.state.fields['IdDealSFA']}
-          />
-          <Input
-            className="field"
-            onChange={this.handleChangeInput}
-            label='IdOffer'
-            name='IdOffer'
-            value={this.state.fields['IdOffer']}
           />
           <Input
             className="field"
