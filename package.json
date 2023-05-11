@@ -1,11 +1,12 @@
 {
   "name": "ekp-generate-link",
   "version": "0.1.0",
+  "homepage": "https://dmitrbrvsk.github.io/ekp-generate-link",
   "private": true,
   "dependencies": {
-    "@alfalab/core-components": "^21.3.1",
     "@alfalab/core-components-button": "^4.4.0",
     "@alfalab/core-components-input": "^7.3.3",
+    "@alfalab/core-components-input-autocomplete": "^7.0.19",
     "@alfalab/core-components-link": "^3.2.0",
     "@alfalab/core-components-typography": "^2.2.0",
     "nanoid": "^3.1.30",
@@ -13,12 +14,16 @@
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
