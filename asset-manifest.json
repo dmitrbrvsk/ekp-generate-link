@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ekp-generate-link/static/css/main.c8f04284.chunk.css",
+    "main.js": "/ekp-generate-link/static/js/main.3973a2fd.chunk.js",
+    "main.js.map": "/ekp-generate-link/static/js/main.3973a2fd.chunk.js.map",
+    "runtime-main.js": "/ekp-generate-link/static/js/runtime-main.7a7c5920.js",
+    "runtime-main.js.map": "/ekp-generate-link/static/js/runtime-main.7a7c5920.js.map",
+    "static/css/2.d2b748c4.chunk.css": "/ekp-generate-link/static/css/2.d2b748c4.chunk.css",
+    "static/js/2.bf2c4527.chunk.js": "/ekp-generate-link/static/js/2.bf2c4527.chunk.js",
+    "static/js/2.bf2c4527.chunk.js.map": "/ekp-generate-link/static/js/2.bf2c4527.chunk.js.map",
+    "index.html": "/ekp-generate-link/index.html",
+    "static/css/2.d2b748c4.chunk.css.map": "/ekp-generate-link/static/css/2.d2b748c4.chunk.css.map",
+    "static/css/main.c8f04284.chunk.css.map": "/ekp-generate-link/static/css/main.c8f04284.chunk.css.map",
+    "static/js/2.bf2c4527.chunk.js.LICENSE.txt": "/ekp-generate-link/static/js/2.bf2c4527.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ekp-generate-link/static/media/ekp-background.cf9e1eec.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7a7c5920.js",
+    "static/css/2.d2b748c4.chunk.css",
+    "static/js/2.bf2c4527.chunk.js",
+    "static/css/main.c8f04284.chunk.css",
+    "static/js/main.3973a2fd.chunk.js"
+  ]
+}
