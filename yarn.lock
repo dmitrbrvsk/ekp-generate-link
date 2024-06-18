@@ -12,6 +12,18 @@
     classnames "^2.2.6"
     react-merge-refs "^1.1.0"
 
+"@alfalab/core-components-checkbox@^4.3.3":
+  version "4.3.3"
+  resolved "http://binary/artifactory/api/npm/npm/@alfalab/core-components-checkbox/-/core-components-checkbox-4.3.3.tgz#ecb2c61e783c42340c9ba568e54236ef3a5ec20e"
+  integrity sha512-/cv0874fas6vkXsRwlobEmEN9zJO+/oQXHKo2tzgMjsp3ROA4hRVBzA8sGZamrpsAUJeXZP/6+xCvERDkGdLTA==
+  dependencies:
+    "@alfalab/core-components-shared" "^0.10.0"
+    "@alfalab/hooks" "^1.13.0"
+    "@alfalab/icons-glyph" "^2.139.0"
+    classnames "^2.3.1"
+    react-merge-refs "^1.1.0"
+    tslib "^2.4.0"
+
 "@alfalab/core-components-form-control@^7.4.0":
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/@alfalab/core-components-form-control/-/core-components-form-control-7.4.0.tgz#8caa9d2249eb0d695cd73b0336b17193aa1dfb8c"
@@ -91,6 +103,14 @@
     react-virtual "^2.2.0"
     resize-observer "^1.0.0"
 
+"@alfalab/core-components-shared@^0.10.0":
+  version "0.10.0"
+  resolved "http://binary/artifactory/api/npm/npm/@alfalab/core-components-shared/-/core-components-shared-0.10.0.tgz#24ae8fd1061a15a7070ad78a92bceb9314df8676"
+  integrity sha512-5fC02UwnEtc6QqwOaHpSaA8+mMfwgOMFd5g1nf3avYwsMBfMjeRe9RLHSssD9sNIdk7s03HWBnwqMyMI3kAJQw==
+  dependencies:
+    "@alfalab/hooks" "^1.13.0"
+    tslib "^2.4.0"
+
 "@alfalab/core-components-skeleton@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@alfalab/core-components-skeleton/-/core-components-skeleton-3.0.2.tgz#e1779fbfe5ab3b11860c36291fb193cc4fb8aac7"
@@ -110,15 +130,41 @@
   dependencies:
     classnames "^2.2.6"
 
+"@alfalab/data@^1.8.0":
+  version "1.8.0"
+  resolved "http://binary/artifactory/api/npm/npm/@alfalab/data/-/data-1.8.0.tgz#2f991e196946336541de5a7d64eabf7caf02b58c"
+  integrity sha512-hyYAw8tbx099ibX9r9T3YiOkxI+s7p/Hi7WOQC6cF+Uy5KX/0usghFyt/gUjj+7acf6G+zx1VwAtcI9tSUle9w==
+
 "@alfalab/hooks@^1.0.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@alfalab/hooks/-/hooks-1.4.0.tgz#aec14fcbe4015024b883dea43e3f4a403322452a"
   integrity sha512-1dV5Dt5+yDxgCW8qufniGd50Vxa/zfzgmpOSsRf4JAczLJrUsWTryz7IFU1wCP4tRPKCO6nkaQDOG4Fd1fmhIw==
 
+"@alfalab/hooks@^1.13.0":
+  version "1.13.0"
+  resolved "http://binary/artifactory/api/npm/npm/@alfalab/hooks/-/hooks-1.13.0.tgz#13c8cf5a326fb85469e6472f469e91d7454a530f"
+  integrity sha512-kAArulLn2plNLZwJIA20KByJq6b/410v7AZp7+X7MMY63oUKKByKhUijIAaFDidKkjV6PBY/aCFzL2fpNLenlQ==
+  dependencies:
+    "@alfalab/utils" "^1.13.2"
+    uuid "^8.3.2"
+
 "@alfalab/icons-glyph@^1.190.0":
   version "1.190.0"
   resolved "https://registry.yarnpkg.com/@alfalab/icons-glyph/-/icons-glyph-1.190.0.tgz#ef9ac0c108dce2d87bda764cd5f4b5c3e09671ca"
   integrity sha512-WrlfVP30XdUIH/La/qy9YcIRY22NluYl90rCg8thtcDXt1Rp+QPuRQ89/l40QrMCtpleHtRV2Sxdn6BmyDC8FQ==
+
+"@alfalab/icons-glyph@^2.139.0":
+  version "2.174.0"
+  resolved "http://binary/artifactory/api/npm/npm/@alfalab/icons-glyph/-/icons-glyph-2.174.0.tgz#a7da1f5bded07d27858a73613332ec4e429101ea"
+  integrity sha512-6F2nx3PU/2/ObrdHGAOyBbZ6XWv/38EVkJCTImk0XF2G763Fpke8sMQoVXlHFEUyK0awVpE9Zuai5Gi19jTTLg==
+
+"@alfalab/utils@^1.13.2":
+  version "1.15.2"
+  resolved "http://binary/artifactory/api/npm/npm/@alfalab/utils/-/utils-1.15.2.tgz#309d0c9add52a59244f9d74eb720c2ad5fe14209"
+  integrity sha512-FD6eH06OHwNB4wr6A81aIAnJjXosXalTnfUiRMA6VALSQBCsvcvxH8BmLUxsLb5Hb84rJS01Q+zk3onT2JBjYA==
+  dependencies:
+    "@alfalab/data" "^1.8.0"
+    lodash "4.17.21"
 
 "@babel/code-frame@7.10.4":
   version "7.10.4"
@@ -3364,6 +3410,11 @@ classnames@^2.2.6:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+
+classnames@^2.3.1:
+  version "2.5.1"
+  resolved "http://binary/artifactory/api/npm/npm/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
+  integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
 
 clean-css@^4.2.3:
   version "4.2.4"
@@ -6861,6 +6912,11 @@ jest@26.6.0:
     import-local "^3.0.2"
     jest-cli "^26.6.0"
 
+js-base64@^3.7.7:
+  version "3.7.7"
+  resolved "http://binary/artifactory/api/npm/npm/js-base64/-/js-base64-3.7.7.tgz#e51b84bf78fbf5702b9541e2cb7bfcb893b43e79"
+  integrity sha512-7rCnleh0z2CkXhH67J8K1Ytz0b2Y+yxTPL+/KOJoa20hfnVQ/3/T6W/KflYI4bRHRagNeXeU2bkNGI3v1oS/lw==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -7179,15 +7235,15 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
+lodash@4.17.21, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
 "lodash@>=3.5 <5", lodash@^4.17.14:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
-lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loglevel@^1.6.8:
   version "1.7.1"
@@ -10826,6 +10882,11 @@ tslib@^2.0.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
+tslib@^2.4.0:
+  version "2.6.3"
+  resolved "http://binary/artifactory/api/npm/npm/tslib/-/tslib-2.6.3.tgz#0438f810ad7a9edcde7a241c3d80db693c8cbfe0"
+  integrity sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==
+
 tsutils@^3.17.1, tsutils@^3.21.0:
   version "3.21.0"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.21.0.tgz#b48717d394cea6c1e096983eed58e9d61715b623"
@@ -11121,7 +11182,7 @@ uuid@^3.3.2, uuid@^3.4.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0:
+uuid@^8.3.0, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==

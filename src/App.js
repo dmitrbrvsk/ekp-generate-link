@@ -3,7 +3,9 @@ import { Button } from '@alfalab/core-components-button';
 import { Typography } from '@alfalab/core-components-typography';
 import { Input } from '@alfalab/core-components-input';
 import { Link } from '@alfalab/core-components-link';
+import { Checkbox } from '@alfalab/core-components-checkbox';
 import { nanoid } from 'nanoid'
+import { encode } from 'js-base64';
 
 import './App.css';
 
@@ -31,7 +33,8 @@ class App extends Component {
       RegionCode: '77',
       SelectedAccount: '40702810702840000000'
     },
-    link: 'https://testjmb.alfabank.ru/credits/?'
+    link: 'https://testjmb.alfabank.ru/credits/?',
+    isLinkFormatBase64: false
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -41,7 +44,15 @@ class App extends Component {
   }
 
   generateLink = () => {
-    const link = `https://testjmb.alfabank.ru/credits/?${Object.entries(this.state.fields).map((field) => `${field[0]}=${field[1]}`).join('&')}`
+    const params = Object.entries(this.state.fields).map((field) => `${field[0]}=${field[1]}`).join('&');
+    let link = `https://testjmb.alfabank.ru/credits/?${params}`;
+
+    if (this.state.isLinkFormatBase64) {
+      const encodeParams = encode(params);
+
+      link = `https://testjmb.alfabank.ru/credits/?data=${encodeParams}`;
+    }
+
     this.setState({ link })
   }
 
@@ -78,6 +89,13 @@ class App extends Component {
 
       }
     }))
+  }
+
+  handleSetLinkBase64 = (event, { value }) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      isLinkFormatBase64: !prevState.isLinkFormatBase64
+    }));
   }
 
   render() {
@@ -237,12 +255,22 @@ class App extends Component {
             value={this.state.fields['SelectedAccount']}
           />
         </div>
-        <Button
-          className="button"
-          view='primary'
-          onClick={this.handleClickButton}>
-          Сгенерировать
-        </Button>
+        <div>
+          <Checkbox
+            className="checkbox"
+            block={true}
+            size={24}
+            onChange={this.handleSetLinkBase64}
+            checked={this.state.isLinkFormatBase64}
+            label='Cсылка в base64'
+          />
+          <Button
+            className="button"
+            view='primary'
+            onClick={this.handleClickButton}>
+              Сгенерировать
+          </Button>
+        </div>
         <Link
           className="link"
           view='default'
